@@ -27,7 +27,7 @@ Route::get('waterfalls/paginate/{number}', 'WaterfallController@listWithPaginate
 Route::get('waterfall/{id}', 'WaterfallController@show');
 
 //Search by name
-Route::get('waterfalls/search/{name}', 'WaterfallController@searchByname');
+Route::get('waterfalls/name/{name}', 'WaterfallController@searchByname');
 
 //List waterfalls in a community
 Route::get('waterfalls/community/{community}', 'WaterfallController@listByCommunity');
@@ -35,6 +35,8 @@ Route::get('waterfalls/community/{community}', 'WaterfallController@listByCommun
 //Get a list of waterfall near to coordinates
 Route::get('waterfalls/longitude/{longitude}/latitude/{latitude}','WaterfallController@listByCoordinates')
 ->where(['longitude' => '^-?[0-9]\d*(\.\d+)?$', 'latitude' => '^-?[0-9]\d*(\.\d+)?$']);
+
+//-------------------------------------------------------------------------------------------------------------------------
 
 //List all Live Music Venues
 Route::get('livemusic', 'LiveMusicVenueController@index');
@@ -49,8 +51,50 @@ Route::get('livemusic/city/{city}', 'LiveMusicVenueController@listByCity');
 Route::get('livemusic/paginate/{number}', 'LiveMusicVenueController@listWithPaginate')->where(['number' => '[0-9]+']);
 
 //Search Music Venue by name
-Route::get('livemusic/search/{name}', 'LiveMusicVenueController@searchByname');
+Route::get('livemusic/name/{name}', 'LiveMusicVenueController@searchByname');
 
 //Get a list of Live Music Venues near 500M to coordinates
 Route::get('livemusic/longitude/{longitude}/latitude/{latitude}','LiveMusicVenueController@listByCoordinates')
 ->where(['longitude' => '^-?[0-9]\d*(\.\d+)?$', 'latitude' => '^-?[0-9]\d*(\.\d+)?$']);
+
+//------------------------------------------------------------------------------------------------------------------------------
+
+//List all Campgrounds
+Route::get('campgrounds', 'CampgroundController@index');
+
+//List a single Campgrounds with id
+Route::get('campground/{id}', 'CampgroundController@show');
+
+//List Campgrounds in a community
+Route::get('campgrounds/community/{city}', 'CampgroundController@listByCommunity');
+
+//All Campgrounds with pagination
+Route::get('campgrounds/paginate/{number}', 'CampgroundController@listWithPaginate')->where(['number' => '[0-9]+']);
+
+//Search Campgrounds by name
+Route::get('campgrounds/name/{name}', 'CampgroundController@searchByname');
+
+//Get a list of campgrounds with 500M of the provided coordinates
+Route::get('campgrounds/longitude/{longitude}/latitude/{latitude}','CampgroundController@listByCoordinates')
+->where(['longitude' => '^-?[0-9]\d*(\.\d+)?$', 'latitude' => '^-?[0-9]\d*(\.\d+)?$']);
+
+//---------------------------------------------------------------------------------------------------------------------------------
+
+//List all Bikeways
+Route::get('bikeways', 'BikewayController@index');
+
+//List a single Bikeways with id
+Route::get('bikeway/{id}', 'BikewayController@show');
+
+//Search Bikeways by name
+Route::get('bikeways/name/{name}', 'BikewayController@searchByname');
+
+//Search Bikeways by type
+Route::get('bikeways/type/{type}', 'BikewayController@searchByType');
+
+//Search Bikeways by ward
+Route::get('bikeways/ward/{type}', 'BikewayController@searchByWard');
+
+//Search Bikeways by length
+Route::get('bikeways/lessthan/{length}', 'BikewayController@lessThanGivenLength')->where(['length' => '^-?[0-9]\d*(\.\d+)?$']);
+Route::get('bikeways/morethan/{length}', 'BikewayController@moreThanGivenLength')->where(['length' => '^-?[0-9]\d*(\.\d+)?$']);
