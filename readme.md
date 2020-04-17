@@ -7,5 +7,3 @@ This api have data abot Waterfalls and Live Music Venues in Hamilton.
 ## How to Use Api
 
     Content to be updated soon!
-
-> > > > > > > ff68a5bc080005ece5777ee70fbce5a52baadcf8
