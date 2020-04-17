@@ -39,7 +39,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'debug' => env('APP_DEBUG', true),
+=======
+    'debug' => env('APP_DEBUG', false),
+>>>>>>> ff68a5bc080005ece5777ee70fbce5a52baadcf8
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +56,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'url' => 'http://sleepy-wildwood-32458.herokuapp.com/',
+=======
+    'url' => env('APP_URL', 'http://localhost'),
+>>>>>>> ff68a5bc080005ece5777ee70fbce5a52baadcf8
 
     'asset_url' => env('ASSET_URL', null),
 
@@ -228,4 +236,8 @@ return [
 
     ],
 
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> ff68a5bc080005ece5777ee70fbce5a52baadcf8
