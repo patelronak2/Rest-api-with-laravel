@@ -15,7 +15,7 @@ class Campground extends JsonResource
     public function toArray($request)
     {
         return [
-            '_id' => $this->_id,
+            'id' => $this->_id,
             'type' => $this->type,
             'attributes' => [
                 'name' => $this->properties['NAME'],

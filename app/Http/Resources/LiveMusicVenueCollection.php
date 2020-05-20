@@ -15,6 +15,7 @@ class LiveMusicVenueCollection extends ResourceCollection
     public function toArray($request)
     {
         return [
+            'type' => "FeatureCollection",
             'data' => $this->collection,
             'links' => [
                 'self' => url("/api/livemusic"),

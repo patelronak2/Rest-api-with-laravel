@@ -102,7 +102,7 @@ return [
         // ],
         'mongodb' => [
             'driver'   => 'mongodb',
-            'dsn' => 'YOUR DSN STRING FROM ATLAS',
+            'dsn' => 'mongodb+srv://ronak:Ronakpatel181198@cluster0-gfayl.mongodb.net/hamilton?retryWrites=true&w=majority',
             'database' => 'hamilton',
         ],
     ],

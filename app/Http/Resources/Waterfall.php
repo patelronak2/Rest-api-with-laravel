@@ -26,9 +26,9 @@ class Waterfall extends JsonResource
                 'height_in_m' => $this->properties['HEIGHT_IN_M'],
                 'width_in_m' => $this->properties['WIDTH_IN_M'],
                 'ownership' => $this->properties['OWNERSHIP'],
-                'access_from' => $this->properties['ACCESS_FROM'],    
-                'geometry' => $this->geometry,
+                'access_from' => $this->properties['ACCESS_FROM']
             ],
+            'geometry' => $this->geometry,
             'links' => [
                 'self' => url("/api/waterfall/{$this->_id}"),
             ]
