@@ -15,10 +15,9 @@ class WaterfallCollection extends ResourceCollection
     public function toArray($request)
     {
         return [
-            'type' => "FeatureCollection",
             'data' => $this->collection,
             'links' => [
-                'self' => url("/api/waterfalls"), 
+                'self' => url("/api/waterfalls"),
             ],
             'meta' => [
                 'displaying_result' =>$this->collection->count(),

@@ -91,19 +91,10 @@ return [
             'prefix_indexes' => true,
         ],
 
-        // 'mongodb' => [
-        //     'driver'   => 'mongodb',
-        //     'host'     => env('MONGO_DB_HOST', 'localhost'),
-        //     'port'     => env('MONGO_DB_PORT', 27017),
-        //     'database' => env('MONGO_DB_DATABASE'),
-        //     'username' => env('MONGO_DB_USERNAME'),
-        //     'password' => env('MONGO_DB_PASSWORD'),
-        //     'options'  => []
-        // ],
         'mongodb' => [
             'driver'   => 'mongodb',
-            'dsn' => 'mongodb+srv://ronak:Ronakpatel181198@cluster0-gfayl.mongodb.net/hamilton?retryWrites=true&w=majority',
-            'database' => 'hamilton',
+            'dsn' => env('MONGO_DB_DSN'),
+            'database' => env('MONGO_DB_DATABASE'),
         ],
     ],
 
