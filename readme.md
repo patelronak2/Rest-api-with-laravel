@@ -10,7 +10,7 @@ This api have data for hamilton city about following topic:
 
 ## How to Use Api
 
-**URL**: http://hamilton-restapi.herokuapp.com/public/api/
+**URL**: http://hamilton-restapi.herokuapp.com/api/
 
 ### For Waterfalls
 
