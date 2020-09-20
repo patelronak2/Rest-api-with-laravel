@@ -14,7 +14,6 @@ This api have data for hamilton city about following topic:
 
 ### For Waterfalls
 
-cls
 **List all**
 
 > /waterfalls
